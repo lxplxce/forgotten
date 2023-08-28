@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="matrix__wrapper" id="matrix__wrapper">
+      <canvas class="matrix" id="matrix-canvas"></canvas>
+      <div class="site-container">
+        @include('partials/header.html', {"class": "home__header"})
+        <main class="main">
+          <div class="home">
+            @include('partials/color-boxes.html') @include('partials/hero.html',
+            {"class": "home__hero"})
+            @include('partials/noname.html',{"class":"home__noname"})
+          </div>
+        </main>
+        @include('partials/footer.html')
+        <!-- @include('html/h1.html') пример include -->
+      </div>
+    </div>
+  </body>
+</html>

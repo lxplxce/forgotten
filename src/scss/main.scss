@@ -1,0 +1,25 @@
+// базовые подключения
+@import "./global/mixins";
+@import "./global/_vars";
+@import "./global/_fonts";
+@import "./global/settings";
+
+// @import "../global/_vars";
+// @import "../global/_fonts";
+// @import "../global/settings";
+
+// общее
+@import "./blocks/home";
+
+// подключения компонентов страницы
+@import "./blocks/header";
+@import "./blocks/hero";
+@import "./blocks/noname";
+
+// мелочь
+@import "./blocks/matrix";
+@import "./blocks/hero-blocks";
+@import "./blocks/scroll-bar";
+@import "./blocks/pipe";
+@import "./blocks/blink-arrow";
+@import "./blocks/color-box";

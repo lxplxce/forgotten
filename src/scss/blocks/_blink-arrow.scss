@@ -1,0 +1,16 @@
+.blink-arrow {
+  opacity: 0;
+  position: absolute;
+  right: 5px;
+  border: 10px solid rgba(0, 0, 0, 0);
+  border-right: 10px solid black;
+  border-radius: 3px;
+}
+@keyframes blink-arrow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

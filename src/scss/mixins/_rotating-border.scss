@@ -1,0 +1,67 @@
+@mixin rotating-border($padding, $back-color) {
+  @keyframes spin {
+    from {
+      transform: translate(-50%, -50%) rotate(0);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  --border-bg: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+  --padding: #{$padding};
+  position: relative;
+  overflow: hidden;
+  padding: calc(var(--padding) + var(--border-size));
+
+  display: inline-block;
+
+  &::before {
+    content: "";
+    display: block;
+    background: var(--border-bg);
+    width: calc(150% * 1.41421356237);
+    padding-bottom: calc(150% * 1.41421356237);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    animation: spin 5s linear infinite;
+  }
+  &--reverse::before {
+    animation-direction: reverse;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: var(--border-size);
+    background: #{$back-color};
+    z-index: -1;
+  }
+}
+
+@mixin rotating-border--2-color($color1, $color2, $border-size) {
+  --border-size: #{$border-size};
+  --border-bg: conic-gradient(
+    #{$color1} 0turn 0.05turn,
+    #{$color2} 0.05turn 0.1turn,
+    #{$color1} 0.1turn 0.15turn,
+    #{$color2} 0.15turn 0.2turn,
+    #{$color1} 0.2turn 0.25turn,
+    #{$color2} 0.25turn 0.3turn,
+    #{$color1} 0.3turn 0.35turn,
+    #{$color2} 0.35turn 0.4turn,
+    #{$color1} 0.4turn 0.45turn,
+    #{$color2} 0.45turn 0.5turn,
+    #{$color1} 0.5turn 0.55turn,
+    #{$color2} 0.55turn 0.6turn,
+    #{$color1} 0.6turn 0.65turn,
+    #{$color2} 0.65turn 0.7turn,
+    #{$color1} 0.7turn 0.75turn,
+    #{$color2} 0.75turn 0.8turn,
+    #{$color1} 0.8turn 0.85turn,
+    #{$color2} 0.85turn 0.9turn,
+    #{$color1} 0.9turn 0.95turn,
+    #{$color2} 0.95turn 1turn
+  );
+}

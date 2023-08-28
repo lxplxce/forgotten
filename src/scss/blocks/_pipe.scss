@@ -1,0 +1,142 @@
+.pipe {
+  box-shadow: inset 0 0 25px rgb(0, 0, 0);
+  background-color: black;
+  border: solid 2px rgb(0, 0, 0);
+  &__top {
+    width: 50px;
+    height: 10px;
+    background-image: url(../img/rust-2.jpg);
+    background-position: 10%;
+    border: 2px solid black;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    margin-left: -8px;
+    margin-top: -4px;
+  }
+  &--down {
+    transform: rotate(180deg);
+    border-top: none;
+    border-bottom: none;
+  }
+  &--up {
+    transform: rotate(360deg);
+    border-top: none;
+    border-bottom: none;
+  }
+  &__double-container {
+    display: flex;
+    height: 100%;
+  }
+  &__double {
+    transform: rotate(180deg);
+    width: 21px;
+    &:not(:last-child) {
+      margin-right: 7px;
+    }
+  }
+  &__double-connector {
+    margin-left: -4.5px;
+    width: 27px;
+    height: 15px;
+  }
+  &__double-angle {
+    margin-left: -2px;
+    position: relative;
+    margin-top: -45px;
+    width: 21px;
+    height: 30px;
+    border-top-right-radius: 20px;
+  }
+  &__double-last {
+    z-index: -1;
+    position: absolute;
+    top: -2px;
+    right: 0;
+    height: 23px;
+    border-top-right-radius: 20px;
+  }
+}
+
+.header {
+  &__pipe-1 {
+    position: absolute;
+    z-index: -2;
+    top: 50%;
+    height: 50px;
+    width: 100%;
+    border-left: none;
+    border-right: none;
+  }
+  &__pipe-2 {
+    position: absolute;
+    bottom: 0;
+    left: 24%;
+    width: 38px;
+    height: 53%;
+    border-top: none;
+  }
+  &__pipe-3 {
+    z-index: -10;
+    position: absolute;
+    top: 0;
+    right: 23%;
+    width: 38px;
+    height: 80%;
+    background-size: cover;
+  }
+  &__h-double__container {
+    position: absolute;
+    bottom: -1px;
+    margin-left: -79px;
+    left: 12.5%;
+  }
+  &__h-double {
+    height: 100%;
+    background-position: 30%;
+
+    border-bottom: none;
+    border-top: none;
+  }
+}
+
+.hero {
+  &-pipe__double-container {
+    position: absolute;
+    left: 0;
+    margin-left: -79px;
+  }
+  &-pipe__double-1 {
+    height: 70%;
+    background-position: 30%;
+
+    border-bottom: none;
+    border-top: none;
+  }
+  &-pipe__double-2 {
+    height: 60%;
+    background-position: 70%;
+    border-bottom: none;
+    border-top: none;
+  }
+  &-pipe__double-angle-1 {
+    border-bottom: none;
+  }
+  &-pipe__double-angle-2 {
+    border-bottom: none;
+  }
+  &-pipe__double-last-1 {
+    width: 70px;
+  }
+  &-pipe__double-last-2 {
+    width: 42px;
+  }
+}
+
+.rust {
+  &-1 {
+    background-image: url(../img/rust-1.jpg);
+  }
+  &-2 {
+    background-image: url(../img/rust-2.jpg);
+  }
+}

@@ -1,0 +1,13 @@
+.noname {
+  color: var(--theme-color);
+  &__content {
+    height: 100%;
+  }
+  &__txt {
+    margin: 0;
+    font-size: 24px;
+    @include max-w1660 {
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+:root {
+  // base
+  --color-white: 255, 255, 255;
+  --color-pink: 255, 36, 76;
+  --color-blue: 87, 255, 207;
+  --color-lime: 83, 255, 157;
+  --color-purple: 250, 107, 250;
+
+  --theme-color: rgb(var(--color-white));
+  --matrix-color: rgba(10, 10, 10, 0.3);
+  --matrix-fz: 26;
+
+  --font-family: "DotGothic16", sans-serif;
+  --content-width: 1150px;
+  --content-fluid-width: 1730px;
+  --container-offset: 60px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-fluid-width: calc(
+    var(--content-fluid-width) + (var(--container-offset) * 2)
+  );
+
+  //box-color vars
+  --box-size: 60px;
+  --light-color-shadow-1: rgb(121, 121, 121);
+  --light-color-shadow-2: rgb(183, 183, 183);
+  --light-color: rgb(201, 201, 201);
+
+  @include max-w1660 {
+    --box-size: 45px;
+  }
+}
+
+// .txt1 {
+//   font-family: "DotGothic16", sans-serif;
+// }
+
+// .txt2 {
+//   font-family: "MochiyPopPOne", sans-serif;
+// }
+
+// .txt3 {
+//   font-family: "RampartOne", sans-serif;
+// }
